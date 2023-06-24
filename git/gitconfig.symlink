@@ -4,7 +4,13 @@
 [hub]
         protocol = https
 [alias]
+        ca = !git add -A && git commit -ac
+        st = status
         co = checkout
+        br = branch
+        cp = cherry-pick
+        rb = pull --rebase
+        norb = pull --rebase=false
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors

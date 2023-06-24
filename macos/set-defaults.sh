@@ -7,14 +7,18 @@
 #
 # Run ./set-defaults.sh and you'll be good to go.
 
-# Disable press-and-hold for keys in favor of key repeat.
-defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Use AirDrop over every interface. srsly this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
-# Always open everything in Finder's list view. This is important.
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+# Always open everything in Finder's column view. This is important.
+defaults write com.apple.Finder FXPreferredViewStyle clmv
+
+# Put the Dock on the left of the screen
+defaults write com.apple.dock "orientation" -string "left" && killall Dock
+
+# Dock icon size of 36 pixels.
+defaults write com.apple.dock "tilesize" -int "36" && killall Dock
 
 # Show the ~/Library folder.
 chflags nohidden ~/Library
@@ -30,8 +34,14 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
-# Hide Safari's bookmark bar.
-defaults write com.apple.Safari ShowFavoritesBar -bool false
+# Automatically empty bin after 30 days
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true" && killall Finder
+
+# Do not display the file extension rename warning
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false" 
 
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true

@@ -21,4 +21,7 @@ then
 
 fi
 
+brew update
+brew bundle --file=$HOME/.dotfiles/homebrew/Brewfile
+
 exit 0

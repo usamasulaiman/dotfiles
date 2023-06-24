@@ -1,16 +1,11 @@
-# holman does dotfiles
+# usama has dotfiles
 
-Your dotfiles are how you personalize your system. These are mine.
+## forked from [holman/dotfiles](https://github.com/holman/dotfiles)
 
-I was a little tired of having long alias files and everything strewn about
-(which is extremely common on other dotfiles projects, too). That led to this
-project being much more topic-centric. I realized I could split a lot of things
-up into the main areas I used (Ruby, git, system libraries, and so on), so I
-structured the project accordingly.
+As you see above, this is forked and heavily based on holman's dotfiles, with a few changes here and there. I've added a few configs that I use, and removed a few things that I don't.
 
 If you're interested in the philosophy behind why projects like these are
-awesome, you might want to [read my post on the
-subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+awesome, you might want to [read this post here](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ## topical
 
@@ -76,12 +71,3 @@ something if I forget to make a check for a dependency.
 If you're brand-new to the project and run into any blockers, please
 [open an issue](https://github.com/holman/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
-
-## thanks
-
-I forked [Ryan Bates](http://github.com/ryanb)' excellent
-[dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
-weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
-dotfiles were an easy way to get into bash customization, and then to jump ship
-to zsh a bit later. A decent amount of the code in these dotfiles stem or are
-inspired from Ryan's original project.
